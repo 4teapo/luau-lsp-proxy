@@ -11,6 +11,22 @@ defaults:
     shell: bash
 
 jobs:
+  init:
+    name: Init
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get_version.outputs.value }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get version from manifest
+        uses: SebRollen/toml-action@v1.2.0
+        id: get_version
+        with:
+          file: Cargo.toml
+          field: package.version
+
   build:
     strategy:
       fail-fast: false

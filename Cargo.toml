@@ -1,0 +1,9 @@
+[package]
+name = "luau-lsp-companion-proxy"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+flate2 = "1.1.2"
+tiny_http = "0.12.0"

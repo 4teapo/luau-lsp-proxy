@@ -1,4 +1,4 @@
-name: Rust
+name: Release
 
 on:
   workflow_dispatch:
@@ -66,6 +66,7 @@ jobs:
         with:
           name: ${{ matrix.artifact-name }}
           path: release.zip
+
   release:
     name: Release
     runs-on: ubuntu-latest

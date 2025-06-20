@@ -58,6 +58,7 @@ jobs:
             cargo-target: aarch64-apple-darwin
 
     name: Build - ${{ matrix.name }}
+    needs: ["init"]
     runs-on: ${{ matrix.runner-os }}
     steps:
       - name: Checkout repository
@@ -93,7 +94,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: ["build"]
+    needs: ["init", "build"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

@@ -4,8 +4,8 @@ A simple proxy for luau-lsp that spawns an HTTP server to handle requests from t
 
 ## Usage
 
-`proxy <PORT> <LUAU-LSP-BINARY> ...luau-lsp arguments...`
+`luau-lsp-proxy <PORT> <LUAU-LSP-BINARY> ...luau-lsp arguments...`
 
 ## Example
 
-`proxy 3667 path/to/luau-lsp lsp`
+`luau-lsp-proxy 3667 path/to/luau-lsp lsp`
